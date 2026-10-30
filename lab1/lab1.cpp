@@ -61,3 +61,27 @@ int main()
     return 0;
 }
 
+// draws a horizontal line
+void drawHorizontalLine(int length, char ch) {
+    cout << "drawHorizontalLine" << endl;
+}
+// draws a vertical line
+void drawVerticalLine(int height, char ch) {
+    cout << "drawVerticalLine" << endl;
+}
+// draws a square
+void drawSquare(int size, char ch) {
+    cout << "drawSquare" << endl;
+}
+// draws a filled square
+void drawSquareFilled(int size, char ch) {
+    cout << "drawSquareFilled" << endl;
+}
+// draws a rectangle
+void drawRectangle(int height, int length, char ch) {
+    cout << "drawRectangle" << endl;
+}
+// draws a filled rectangle
+void drawRectangleFilled(int height, int length, char ch) {
+    cout << "drawRectangleFilled" << endl;
+}
