@@ -39,16 +39,16 @@ int main()
             drawVerticalLine(height, ch);
         }
         else if (choice == 3) {
-            cout << "drawSquare" << endl;
+            drawSquare(size, ch);
         }
         else if (choice == 4) {
-            cout << "drawSquareFillerd" << endl;
+            drawSquareFilled(size, ch);
         }
         else if (choice == 5) {
-            cout << "drawRectangle" << endl;
+            drawRectangle(height, length, ch);
         }
         else if (choice == 6) {
-            cout << "drawRectangleFilled" << endl;
+            drawRectangleFilled(height, length, ch);
         }
         else if (choice == 7) {
             cout << "Quit" << endl;
