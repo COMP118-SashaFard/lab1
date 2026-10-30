@@ -4,6 +4,14 @@
 #include <iostream>
 using namespace std;
 
+//fx protorypes
+void drawHorizontalLine(int length, char ch);
+void drawVerticalLine(int height, char ch);
+void drawSquare(int size, char ch);
+void drawSquareFilled(int size, char ch);
+void drawRectangle(int height, int length, char ch);
+void drawRectangleFilled(int height, int length, char ch);
+
 int main()
 {
     int choice = 0;
