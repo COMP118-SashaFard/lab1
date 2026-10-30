@@ -2,6 +2,10 @@
 // Author : Sasha Fard
 
 #include <iostream>
+#include<cstdlib>
+#include<ctime>
+#include<cassert>
+
 using namespace std;
 
 //fx protorypes
@@ -12,8 +16,14 @@ void drawSquareFilled(int size, char ch);
 void drawRectangle(int height, int length, char ch);
 void drawRectangleFilled(int height, int length, char ch);
 
+//drawShapes prototype
+void drawShapes();
+
 int main()
 {
+    // random initialization
+    srand(time(NULL));
+
     int choice = 0, height = 0, length = 0, size = 0;
     char ch = '-';
 
@@ -85,4 +95,10 @@ void drawRectangle(int height, int length, char ch) {
 // draws a filled rectangle
 void drawRectangleFilled(int height, int length, char ch) {
     cout << "drawRectangleFilled" << endl;
+}
+// randomly generates a number of shapes and draws them with functions above
+void drawShapes() {
+    int shapeType = 1 + rand() % 6;
+    int shapeLength = 5 + rand() % 20;
+    char shapeCharacter = 33 + rand() % 126;
 }
