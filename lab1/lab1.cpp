@@ -51,7 +51,7 @@ int main()
             drawRectangleFilled(height, length, ch);
         }
         else if (choice == 7) {
-            cout << "Quit" << endl;
+            cout << "Quit" << endl; // @todo idk why i need this if 0 quits the program
         }
         else {
             cout << "default" << endl;
