@@ -14,7 +14,8 @@ void drawRectangleFilled(int height, int length, char ch);
 
 int main()
 {
-    int choice = 0;
+    int choice = 0, height = 0, length = 0, size = 0;
+    char ch = '-';
 
     do {
         
@@ -32,10 +33,10 @@ int main()
         cout << endl;
 
         if (choice == 1) {
-            cout << "drawHorizontalLine" << endl;
+            drawHorizontalLine(length, ch);
         }
         else if (choice == 2) {
-            cout << "drawVerticalLine" << endl;
+            drawVerticalLine(height, ch);
         }
         else if (choice == 3) {
             cout << "drawSquare" << endl;
