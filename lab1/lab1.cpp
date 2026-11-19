@@ -102,9 +102,31 @@ void drawRectangle(int height, int length, char ch) {
 void drawRectangleFilled(int height, int length, char ch) {
     cout << "drawRectangleFilled" << endl;
 }
-// randomly generates a number of shapes and draws them with functions above
-void drawShapes() {
-    int shapeType = 1 + rand() % 6;
-    int shapeLength = 5 + rand() % 20;
-    char shapeCharacter = 33 + rand() % 126;
+// randomly generates numShapes shapes and draws each one using the functions above
+void drawShapes(int numShapes) {
+    for (int i = 0; i < numShapes; i++) {
+        int shapeType = 1 + rand() % 6;          // 1 - 6
+        int shapeLength = 5 + rand() % 16;       // 5 - 20
+        char shapeCharacter = 33 + rand() % 94;  // 33 - 126
+        int shapeHeight = 5 + rand() % 16;       // used for rectangles
+
+        if (shapeType == 1) {
+            drawHorizontalLine(shapeLength, shapeCharacter);
+        }
+        else if (shapeType == 2) {
+            drawVerticalLine(shapeLength, shapeCharacter);
+        }
+        else if (shapeType == 3) {
+            drawSquare(shapeLength, shapeCharacter);
+        }
+        else if (shapeType == 4) {
+            drawSquareFilled(shapeLength, shapeCharacter);
+        }
+        else if (shapeType == 5) {
+            drawRectangle(shapeHeight, shapeLength, shapeCharacter);
+        }
+        else {
+            drawRectangleFilled(shapeHeight, shapeLength, shapeCharacter);
+        }
+    }
 }
