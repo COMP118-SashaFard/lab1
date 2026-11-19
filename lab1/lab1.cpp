@@ -16,8 +16,11 @@ void drawSquareFilled(int size, char ch);
 void drawRectangle(int height, int length, char ch);
 void drawRectangleFilled(int height, int length, char ch);
 
-//drawShapes prototype
-void drawShapes();
+// Global constants
+const int MAX_SHAPES = 10;
+
+// Randomly generates and draws a number of shapes
+void drawShapes(int numShapes);
 
 int main()
 {
