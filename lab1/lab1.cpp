@@ -28,23 +28,21 @@ int main()
     char ch = '-';
 
     do {
-        cout << "\n0) Quit" << endl;
-        cout << "1) Draw a horizontal line" << endl;
+        cout << "\n1) Draw a horizontal line" << endl;
         cout << "2) Draw a vertical line" << endl;
         cout << "3) Draw a square" << endl;
         cout << "4) Draw a square Filled" << endl;
         cout << "5) Draw a rectangle" << endl;
         cout << "6) Draw a rectangle Filled" << endl;
-        cout << "Please, enter your option: " << endl << endl;
+        cout << "7) Quit" << endl;
+        cout << "8) Draw random shapes" << endl;
+        cout << "Enter your Option: ";
 
         cin >> choice;
 
         cout << endl;
 
-        if (choice == 0) {
-            cout << "Quit" << endl;
-        }
-        else if (choice == 1) {
+         if (choice == 1) {
             drawHorizontalLine(length, ch);
         }
         else if (choice == 2) {
@@ -63,13 +61,16 @@ int main()
             drawRectangleFilled(height, length, ch);
         }
         else if (choice == 7) {
-            drawShapes();
-        }
+             cout << "Goodbye!" << endl;
+         }
+        else if (choice == 8) {
+             drawShapes(MAX_SHAPES);
+         }
         else {
-            cout << "default" << endl;
-        }
+             cout << "Wrong choice, try again." << endl;
+         }
 
-    } while (choice != 0);
+    } while (choice != 7);
 
     return 0;
 }
