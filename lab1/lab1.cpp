@@ -21,6 +21,7 @@ const int MAX_SHAPES = 10;
 
 // Randomly generates and draws a number of shapes
 void drawShapes(int numShapes);
+int readInt();
 
 int main()
 {
@@ -41,7 +42,7 @@ int main()
         cout << "8) Draw random shapes" << endl;
         cout << "Enter your Option: ";
 
-        cin >> choice;
+        choice = readInt();
 
         cout << endl;
 
@@ -129,4 +130,15 @@ void drawShapes(int numShapes) {
             drawRectangleFilled(shapeHeight, shapeLength, shapeCharacter);
         }
     }
+}
+
+// Reads an int from cin, asking again until a valid number is entered
+int readInt() {
+    int value;
+    while (!(cin >> value)) {
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cout << "Not a number, try again: ";
+    }
+    return value;
 }
