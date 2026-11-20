@@ -22,6 +22,7 @@ const int MAX_SHAPES = 10;
 // Randomly generates and draws a number of shapes
 void drawShapes(int numShapes);
 int readInt();
+int readPositiveInt();
 
 int main()
 {
@@ -46,7 +47,25 @@ int main()
 
         cout << endl;
 
-         if (choice == 1) {
+        if (choice >= 1 && choice <= 6) {
+            if (choice == 1 || choice == 5 || choice == 6) {
+                cout << "Enter length: ";
+                length = readPositiveInt();
+            }
+            if (choice == 2 || choice == 5 || choice == 6) {
+                cout << "Enter height: ";
+                height = readPositiveInt();
+            }
+            if (choice == 3 || choice == 4) {
+                cout << "Enter size: ";
+                size = readPositiveInt();
+            }
+            cout << "Enter character: ";
+            cin >> ch;
+            cout << endl;
+        }
+
+        if (choice == 1) {
             drawHorizontalLine(length, ch);
         }
         else if (choice == 2) {
@@ -65,16 +84,14 @@ int main()
             drawRectangleFilled(height, length, ch);
         }
         else if (choice == 7) {
-             cout << "Goodbye!" << endl;
-         }
+            cout << "Goodbye!" << endl;
+        }
         else if (choice == 8) {
-             drawShapes(MAX_SHAPES);
-         }
+            drawShapes(MAX_SHAPES);
+        }
         else {
-             cout << "Wrong choice, try again." << endl;
-         }
-
-    } while (choice != 7);
+            cout << "Wrong choice, try again." << endl;
+        }
 
     return 0;
 }
@@ -139,6 +156,16 @@ int readInt() {
         cin.clear();
         cin.ignore(10000, '\n');
         cout << "Not a number, try again: ";
+    }
+    return value;
+}
+
+// Reads a positive int from cin, asking again until the number is greater than 0
+int readPositiveInt() {
+    int value = readInt();
+    while (value <= 0) {
+        cout << "Must be greater than 0, try again: ";
+        value = readInt();
     }
     return value;
 }
